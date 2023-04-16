@@ -1,7 +1,6 @@
 public class VariablesTheme {
 
     public static void main(String[] args) {
-
         System.out.println("\n1. Outputting Variable Values to the Console\n");
         
         byte windows = 10;
@@ -26,14 +25,13 @@ public class VariablesTheme {
         
         int pen = 100;
         int book = 200;
-        int sale = 11;
+        int discount = 11;
+        int noDiscount = pen + book;
+        int sizeDiscount = noDiscount * discount / 100;
         
-        int nosale = pen + book;
-        int sizesale = nosale * sale / 100;
-        
-        System.out.println("Pen and Book NOSALE = " + nosale);
-        System.out.println("SALE = " + sizesale);
-        System.out.println("Pen and Book SALE = " + (nosale - sizesale));
+        System.out.println("Pen and Book NO DISCOUNT = " + noDiscount);
+        System.out.println("SALE = " + sizeDiscount);
+        System.out.println("Pen and Book DISCOUNT = " + (noDiscount - sizeDiscount));
         
         System.out.println("\n3. Word derivation Java\n");
         
@@ -44,114 +42,107 @@ public class VariablesTheme {
         
         System.out.println("\n4. Output min and max values of integer numeric types\n");
         
-        byte b = 127;
-        System.out.println(b);
-        ++b;
-        System.out.println(b);
-        --b;
-        System.out.println(b);
+        byte numberByte = 127;
+        System.out.println(numberByte);
+        System.out.println(++numberByte);
+        System.out.println(--numberByte);
 
-        short s = 32_767;
-        System.out.println("\n" + s);
-        ++s;
-        System.out.println(s);
-        --s;
-        System.out.println(s);
+        short numberShort = 32_767;
+        System.out.println("\n" + numberShort);
+        System.out.println(++numberShort);
+        System.out.println(--numberShort);
 
-        int i = 2_147_483_647;
-        System.out.println("\n" + i);
-        ++i;
-        System.out.println(i);
-        --i;
-        System.out.println(i);
+        int numberInt = 2_147_483_647;
+        System.out.println("\n" + numberInt);
+        System.out.println(++numberInt);
+        System.out.println(--numberInt);
 
-        long l = 9_223_372_036_854_775_807l;
-        System.out.println("\n" + l);
-        ++l;
-        System.out.println(l);
-        --l;
-        System.out.println(l);
+        long numberLong = 9_223_372_036_854_775_807l;
+        System.out.println("\n" + numberLong);
+        System.out.println(++numberLong);
+        System.out.println(--numberLong);
         
         System.out.println("\n5. Rearranging Variable Values\n");
         
-        int x = 2;
-        int y = 5;
+        int numberX = 2;
+        int numberY = 5;
         
         System.out.println("- using the third variable");
-        System.out.println("x = " + x + " | y = " + y);
+        System.out.println("x = " + numberX + " | y = " + numberY);
         
-        int z;
-        z = y;
-        y = x;
-        x = z;
+        int numberZ = numberY;
+        numberY = numberX;
+        numberX = numberZ;
         
-        System.out.println("x = "+ x + " | y = " + y);
+        System.out.println("x = "+ numberX + " | y = " + numberY);
 
         System.out.println("- using arithmetic operations");
-        System.out.println("x = "+ x + " | y = " + y);
+        System.out.println("x = "+ numberX + " | y = " + numberY);
         
-        x += y;
-        y = x - y;
-        x -= y;
+        numberX += numberY;
+        numberY = numberX - numberY;
+        numberX -= numberY;
         
-        System.out.println("x = "+ x + " | y = " + y);
+        System.out.println("x = "+ numberX + " | y = " + numberY);
 
         System.out.println("- using the bitwise operation");
-        System.out.println("x = "+ x + " | y = " + y);
+        System.out.println("x = "+ numberX + " | y = " + numberY);
         
-        x ^= y;
-        y ^= x;
-        x ^= y;
+        numberX ^= numberY;
+        numberY ^= numberX;
+        numberX ^= numberY;
         
-        System.out.println("x = "+ x + " | y = " + y);
+        System.out.println("x = "+ numberX + " | y = " + numberY);
         
         System.out.println("\n6. Output of characters and their codes\n");
         
-        byte code1 = 35;
-        char symbol1 = (char) code1;
-        byte code2 = 38;
-        char symbol2 = (char) code2;
-        byte code3 = 64;
-        char symbol3 = (char) code3;
-        byte code4 = 94;
-        char symbol4 = (char) code4;
-        byte code5 = 95;
-        char symbol5 = (char) code5;
-        
-        System.out.println(code1 + " | " + symbol1);
-        System.out.println(code2 + " | " + symbol2);
-        System.out.println(code3 + " | " + symbol3);
-        System.out.println(code4 + " | " + symbol4);
-        System.out.println(code5 + " | " + symbol5);
+        char numberSign = '#';
+        int numberSignCode = numberSign;
+        char ampersand = '&';
+        int ampersandCode = ampersand;
+        char atSymbol = '@';
+        int atSymbolCode = atSymbol;
+        char circumflex = '^';
+        int circumflexCode = circumflex;
+        char underscore1 = '_';
+        int underscoreCode = underscore1;
+
+        System.out.println(numberSignCode + " | " + numberSign);
+        System.out.println(ampersandCode + " | " + ampersand);
+        System.out.println(atSymbolCode + " | " + atSymbol);
+        System.out.println(circumflexCode + " | " + circumflex);
+        System.out.println(underscoreCode + " | " + underscore1);
         
         System.out.println("\n7. Duke's ASCII art console output\n");
         
-        char num1 = '/';
-        char num2 = '\\';
-        char num3 = '(';
-        char num4 = ')';
-        char num5 = '_';
+        char forwardSlash = '/';
+        char backslash = '\\';
+        char leftParenthesis = '(';
+        char rightParenthesis = ')';
+        char underscore2 = '_';
         
-        System.out.println("     " + num1 + num2);
-        System.out.println("    " + num1 + "  " + num2);
-        System.out.println("   " + num1 + num5 + num3 + " " + num4 + num2);
-        System.out.println("  " + num1 + "      " + num2);
-        System.out.println(" " + num1 + num5 + num5 + num5 + num5 + num1 + num2 + num5 + num5 + num2);
+        System.out.println("     " + forwardSlash + backslash);
+        System.out.println("    " + forwardSlash + "  " + backslash);
+        System.out.println("   " + forwardSlash + underscore2 + leftParenthesis + " " + rightParenthesis
+            + backslash);
+        System.out.println("  " + forwardSlash + "      " + backslash);
+        System.out.println(" " + forwardSlash + underscore2 + underscore2 + underscore2 + underscore2
+            + forwardSlash + backslash + underscore2 + underscore2 + backslash);
         
-        System.out.println("\n8. Outputting the number of hundreds, tens and units of a number\n");
+        System.out.println("\n8. Outputting the number of hundreds, tens and ones of a number\n");
         
         int number = 123;
-        int numberHundreds = number / 100;
+        int hundreds = number / 100;
         int number1 = number % 100;
-        int numberTens = number1 / 10;
-        int numberUnits = number1 % 10;
+        int tens = number1 / 10;
+        int ones = number1 % 10;
         
         System.out.println("The number N contains:");
-        System.out.println(numberHundreds + " hundreds");
-        System.out.println(numberTens + " tens");
-        System.out.println(numberUnits + " units");
-        System.out.println("\nThe sum of its digits = " + numberHundreds + numberTens + numberUnits);
-        System.out.println("Product = " + numberHundreds * numberTens * numberUnits);
+        System.out.println(hundreds + " hundreds");
+        System.out.println(tens + " tens");
+        System.out.println(ones + " ones");
+        System.out.println("\nThe sum of its digits = " + hundreds + tens + ones);
+        System.out.println("Product = " + hundreds * tens * ones);
         
         System.out.println("\n9. Time output\n");
         
